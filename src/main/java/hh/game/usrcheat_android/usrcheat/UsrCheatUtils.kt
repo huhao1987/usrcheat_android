@@ -165,8 +165,8 @@ class UsrCheatUtils {
                             var processfolder = processFolder(templist)
                             templist = processfolder.get("list") as List<Byte>
                             var tempgamefolder = processfolder.get("gamefolder") as GameFolder
-                            if (checkisfolder.equals(10)) tempgamefolder.isSingleChoosen = false
-                            else if (checkisfolder.equals(11)) tempgamefolder.isSingleChoosen = true
+                            if (checkisfolder.equals("10")) tempgamefolder.isSingleChoosen = false
+                            else if (checkisfolder.equals("11")) tempgamefolder.isSingleChoosen = true
                             tempgamefolder.numOfCodes = codechuck.toInt()
                             tempgamefolder.codelist = ArrayList()
                             for (n in 0..tempgamefolder.numOfCodes - 1) {
