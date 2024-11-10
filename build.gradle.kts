@@ -1,16 +1,15 @@
 plugins {
     id("com.android.library")
-    id("org.jetbrains.kotlin.android")
-    id ("org.jetbrains.kotlin.plugin.parcelize")
+    alias(libs.plugins.jetbrains.kotlin.android)
+    id("kotlin-parcelize")
 }
-
 android {
-    compileSdk = 31
+    namespace = "hh.game.usrcheat_android"
+    compileSdk = 35
 
     defaultConfig {
-        minSdk = 21
-        targetSdk = 31
-
+        minSdk = 24
+        targetSdk = 35
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -33,11 +32,12 @@ android {
 }
 
 dependencies {
-
-    implementation("androidx.core:core-ktx:1.6.0")
-    implementation("androidx.appcompat:appcompat:1.3.1")
-    implementation("com.google.android.material:material:1.4.0")
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.3")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.material)
+    implementation(libs.androidx.activity)
+    implementation(libs.androidx.constraintlayout)
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.androidx.espresso.core)
 }

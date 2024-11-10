@@ -25,16 +25,4 @@ data class Gamedetail (
     var codepointer:Int=0,
     //Codes as a list
     var items:ArrayList<GameFolder> = ArrayList()
-) : Parcelable{
-    companion object{
-        var CREATOR: Parcelable.Creator<Gamedetail> =
-            object : Parcelable.Creator<Gamedetail> {
-                override fun createFromParcel(`in`: Parcel): Gamedetail {
-                    return Gamedetail()
-                }
-                override fun newArray(size: Int): Array<Gamedetail?> {
-                    return arrayOfNulls<Gamedetail>(size)
-                }
-            }
-    }
-}
+) : Parcelable
